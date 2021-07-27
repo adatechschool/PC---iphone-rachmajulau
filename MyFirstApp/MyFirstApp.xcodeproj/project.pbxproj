@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		6D52386626B04C4200681C52 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D52386526B04C4200681C52 /* DetailView.swift */; };
+		6D52386A26B052A300681C52 /* SurfSpot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D52386926B052A300681C52 /* SurfSpot.swift */; };
 		6D555A2226B00C1C00A2439F /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D555A2126B00C1C00A2439F /* MapView.swift */; };
 		6D5E788826AEE1F0002E7E45 /* MyFirstAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D5E788726AEE1F0002E7E45 /* MyFirstAppApp.swift */; };
 		6D5E788A26AEE1F0002E7E45 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D5E788926AEE1F0002E7E45 /* ContentView.swift */; };
@@ -17,6 +18,7 @@
 
 /* Begin PBXFileReference section */
 		6D52386526B04C4200681C52 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
+		6D52386926B052A300681C52 /* SurfSpot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurfSpot.swift; sourceTree = "<group>"; };
 		6D555A2126B00C1C00A2439F /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
 		6D5E788426AEE1F0002E7E45 /* MyFirstApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyFirstApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6D5E788726AEE1F0002E7E45 /* MyFirstAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyFirstAppApp.swift; sourceTree = "<group>"; };
@@ -57,6 +59,7 @@
 			isa = PBXGroup;
 			children = (
 				6D52386526B04C4200681C52 /* DetailView.swift */,
+				6D52386926B052A300681C52 /* SurfSpot.swift */,
 				6D5E788726AEE1F0002E7E45 /* MyFirstAppApp.swift */,
 				6D5E788926AEE1F0002E7E45 /* ContentView.swift */,
 				6D555A2126B00C1C00A2439F /* MapView.swift */,
@@ -145,6 +148,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6D5E788A26AEE1F0002E7E45 /* ContentView.swift in Sources */,
+				6D52386A26B052A300681C52 /* SurfSpot.swift in Sources */,
 				6D52386626B04C4200681C52 /* DetailView.swift in Sources */,
 				6D555A2226B00C1C00A2439F /* MapView.swift in Sources */,
 				6D5E788826AEE1F0002E7E45 /* MyFirstAppApp.swift in Sources */,
