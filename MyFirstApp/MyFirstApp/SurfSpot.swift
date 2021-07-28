@@ -20,10 +20,7 @@ struct SurfSpot : Hashable, Codable {
         self.photos = photos
         self.address = address
     }
-    
-//    private var imageName: String
-//      var image: Image {
-//          Image(imageName)
-//      }
-    
+   
 }
+    
+

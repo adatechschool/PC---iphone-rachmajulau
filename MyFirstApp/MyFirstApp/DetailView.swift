@@ -7,21 +7,28 @@
 
 import SwiftUI
 
+
 struct DetailView: View {
+    var spots =
+        [
+            SurfSpot(id: 1, surfBreak:"Reef1", photos:"SkeletonBay", address:"SkeletonBay"),
+            SurfSpot(id: 2, surfBreak:"Reef2", photos:"Hawai", address:"Hawai"),
+            SurfSpot(id: 3, surfBreak:"Reef3", photos:"Mentawai", address:"Mentawai")
+        ]
+
     var body: some View {
-      
         VStack {
 
-            Image("SkeletonBay")
+            Image(spots[0].photos)
                         .offset(y: -130)
                         .padding(.bottom, -130)
 
                     VStack(alignment: .leading) {
-                        Text("Supertubes")
+                        Text(spots[0].surfBreak)
                             .font(.title)
 
                         HStack {
-                            Text("Jeffreys Bay")
+                            Text(spots[0].address)
                                 .font(.subheadline)
                             Spacer()
                             Text("South Africa")
