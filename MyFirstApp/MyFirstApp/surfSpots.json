@@ -1,14 +1,5 @@
-//
-//  SurfSpot.swift
-//  MyFirstApp
-//
-//  Created by marie flores on 27/07/2021.
-//
 
-import Foundation
-import SwiftUI
-let JSON  = """
-    {
+{
     "records": [{
             "name" : "Pipeline",
             "Surf Break": "Reef Break",
@@ -22,23 +13,3 @@ let JSON  = """
         }
     ]
 }
-"""
-
-
-struct SurfSpot : Hashable, Codable {
-   
-    var name: String
-    var photos: String
-    var address: String
-    var type: String
-    
-    init(id: Int, name: String, photos: String, address: String, type:String) {
-        self.name = name
-        self.photos = photos
-        self.address = address
-        self.type = type
-    }
-}
-
-    
-
