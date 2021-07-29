@@ -9,21 +9,32 @@ import SwiftUI
 
 struct ContentView: View {
     
+    init() {
+
+        UINavigationBar.appearance().largeTitleTextAttributes = [.foregroundColor: UIColor(red: 99/255, green: 173/255, blue: 255/255, alpha: 1.0)]
+
+    }
+    
     var spots =
         [
-            SurfSpot(id: 1, surfBreak:"Reef1", photos:"SkeletonBay", address:"SkeletonBay"),
-            SurfSpot(id: 2, surfBreak:"Reef2", photos:"Hawai", address:"Hawai"),
-            SurfSpot(id: 3, surfBreak:"Reef3", photos:"Mentawai", address:"Mentawai")
+            SurfSpot(id: 1, name:"Pipeline", photos:"SkeletonBay", address:"SkeletonBay",type: "ReefBreak"),
+            SurfSpot(id: 2, name:"Supertubes", photos:"Hawai", address:"Hawai",type: "PointBreak"),
+            SurfSpot(id: 3, name:"Pipeline2", photos:"Mentawai", address:"Mentawai", type: "BeachBreak")
         ]
     
     var body: some View {
         NavigationView{
+
         List {
             ForEach(spots, id: \.self){ spot in
                 NavigationLink(destination: DetailView(surfSpot: spot)) {
                     HStack {
-                        Text(spot.surfBreak)
-                        Text(spot.address)
+                        VStack(alignment: .leading) {
+                            Text(spot.name)
+                                .font(.headline)
+                            Text(spot.address)
+                                    .font(.subheadline)
+                        }
                         Spacer()
                         Image(spot.photos)
                             .resizable()
@@ -36,7 +47,6 @@ struct ContentView: View {
             }
         }
         .navigationTitle("WannaSurf?")
-            
         }
     }
 }

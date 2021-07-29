@@ -22,14 +22,14 @@ struct DetailView: View {
                 .clipped()
 
                     VStack(alignment: .leading) {
-                        Text(surfSpot.surfBreak)
+                        Text(surfSpot.name)
                             .font(.title)
 
                         HStack {
                             Text(surfSpot.address)
                                 .font(.subheadline)
                             Spacer()
-                            Text("South Africa")
+                            Text(surfSpot.type)
                                 .font(.subheadline)
                         }
                     }
@@ -42,7 +42,7 @@ struct DetailView: View {
 
 struct DetailView_Previews: PreviewProvider {
     static var previews: some View {
-        DetailView(surfSpot: SurfSpot(id: 1, surfBreak:"Reef1", photos:"SkeletonBay", address:"SkeletonBay"))
+        DetailView(surfSpot: SurfSpot(id: 1, name:"Pipeline", photos:"SkeletonBay", address:"SkeletonBay", type:"ReefBreak"))
         
     }
 }

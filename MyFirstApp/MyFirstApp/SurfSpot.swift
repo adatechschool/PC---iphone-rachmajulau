@@ -10,15 +10,17 @@ import SwiftUI
 
 struct SurfSpot : Hashable, Codable {
     var id: Int
-    var surfBreak: String
+    var name: String
     var photos: String
     var address: String
+    var type: String
     
-    init(id: Int, surfBreak: String, photos: String, address: String) {
+    init(id: Int, name: String, photos: String, address: String, type:String) {
         self.id = id
-        self.surfBreak = surfBreak
+        self.name = name
         self.photos = photos
         self.address = address
+        self.type = type
     }
    
 }
