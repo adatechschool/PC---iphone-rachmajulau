@@ -46,7 +46,7 @@ struct ContentView: View {
                 }
             }
         }
-        .navigationTitle("WannaSurf?")
+        .navigationTitle("🏄    WannaSurf?")
         }
     }
 }
