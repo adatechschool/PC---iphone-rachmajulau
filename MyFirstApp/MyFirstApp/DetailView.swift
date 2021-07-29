@@ -9,26 +9,24 @@ import SwiftUI
 
 
 struct DetailView: View {
-    var spots =
-        [
-            SurfSpot(id: 1, surfBreak:"Reef1", photos:"SkeletonBay", address:"SkeletonBay"),
-            SurfSpot(id: 2, surfBreak:"Reef2", photos:"Hawai", address:"Hawai"),
-            SurfSpot(id: 3, surfBreak:"Reef3", photos:"Mentawai", address:"Mentawai")
-        ]
+    var surfSpot : SurfSpot
+
 
     var body: some View {
         VStack {
 
-            Image(spots[0].photos)
-                        .offset(y: -130)
-                        .padding(.bottom, -130)
+            Image(surfSpot.photos)
+                .resizable()
+                .aspectRatio(contentMode: /*@START_MENU_TOKEN@*/.fill/*@END_MENU_TOKEN@*/)
+                .frame(width:300, height: 300)
+                .clipped()
 
                     VStack(alignment: .leading) {
-                        Text(spots[0].surfBreak)
+                        Text(surfSpot.surfBreak)
                             .font(.title)
 
                         HStack {
-                            Text(spots[0].address)
+                            Text(surfSpot.address)
                                 .font(.subheadline)
                             Spacer()
                             Text("South Africa")
@@ -44,6 +42,7 @@ struct DetailView: View {
 
 struct DetailView_Previews: PreviewProvider {
     static var previews: some View {
-        DetailView()
+        DetailView(surfSpot: SurfSpot(id: 1, surfBreak:"Reef1", photos:"SkeletonBay", address:"SkeletonBay"))
+        
     }
 }

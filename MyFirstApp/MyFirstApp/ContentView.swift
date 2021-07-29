@@ -17,24 +17,26 @@ struct ContentView: View {
         ]
     
     var body: some View {
+        NavigationView{
         List {
-            Text("WannaSurf?")
-                .bold()
-                .foregroundColor(/*@START_MENU_TOKEN@*/.blue/*@END_MENU_TOKEN@*/)
             ForEach(spots, id: \.self){ spot in
-                HStack {
-                    Text(spot.surfBreak)
-                    Text(spot.address)
-                    Spacer()
-                    Image(spot.photos)
-                        .resizable()
-                        .aspectRatio(contentMode: /*@START_MENU_TOKEN@*/.fill/*@END_MENU_TOKEN@*/)
-                        .frame(width: 100, height: 80)
-                        .clipped()
+                NavigationLink(destination: DetailView(surfSpot: spot)) {
+                    HStack {
+                        Text(spot.surfBreak)
+                        Text(spot.address)
+                        Spacer()
+                        Image(spot.photos)
+                            .resizable()
+                            .aspectRatio(contentMode: /*@START_MENU_TOKEN@*/.fill/*@END_MENU_TOKEN@*/)
+                            .frame(width: 100, height: 80)
+                            .clipped()
+                        }
+                    .padding()
                 }
-                .padding()
-
             }
+        }
+        .navigationTitle("WannaSurf?")
+            
         }
     }
 }
