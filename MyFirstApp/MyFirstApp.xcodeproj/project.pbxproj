@@ -3,10 +3,11 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6D32CAA826B405630098034A /* URLImage in Frameworks */ = {isa = PBXBuildFile; productRef = 6D32CAA726B405630098034A /* URLImage */; };
 		6D52386626B04C4200681C52 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D52386526B04C4200681C52 /* DetailView.swift */; };
 		6D52386A26B052A300681C52 /* SurfSpot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D52386926B052A300681C52 /* SurfSpot.swift */; };
 		6D52386C26B2E0AA00681C52 /* surfSpots.json in Resources */ = {isa = PBXBuildFile; fileRef = 6D52386B26B2E0AA00681C52 /* surfSpots.json */; };
@@ -35,6 +36,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6D32CAA826B405630098034A /* URLImage in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -97,6 +99,9 @@
 			dependencies = (
 			);
 			name = MyFirstApp;
+			packageProductDependencies = (
+				6D32CAA726B405630098034A /* URLImage */,
+			);
 			productName = MyFirstApp;
 			productReference = 6D5E788426AEE1F0002E7E45 /* MyFirstApp.app */;
 			productType = "com.apple.product-type.application";
@@ -124,6 +129,9 @@
 				Base,
 			);
 			mainGroup = 6D5E787B26AEE1F0002E7E45;
+			packageReferences = (
+				6D32CAA626B405630098034A /* XCRemoteSwiftPackageReference "url-image" */,
+			);
 			productRefGroup = 6D5E788526AEE1F0002E7E45 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -342,6 +350,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		6D32CAA626B405630098034A /* XCRemoteSwiftPackageReference "url-image" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/dmytro-anokhin/url-image.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.1.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		6D32CAA726B405630098034A /* URLImage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 6D32CAA626B405630098034A /* XCRemoteSwiftPackageReference "url-image" */;
+			productName = URLImage;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 6D5E787C26AEE1F0002E7E45 /* Project object */;
 }
