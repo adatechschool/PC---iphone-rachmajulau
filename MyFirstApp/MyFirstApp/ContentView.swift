@@ -39,17 +39,17 @@ struct ContentView: View {
                             VStack(alignment: .leading) {
                                 Text(spot.name)
                                     .font(.headline)
-//                                Text(spot.address)
-//                                    .font(.subheadline)
+                                Text(spot.address)
+                                    .font(.subheadline)
                             }
                             Spacer()
-//                            URLImage(spot.photoUrl!) { image in
-//                                image
-//                                    .resizable()
-//                                    .aspectRatio(contentMode: /*@START_MENU_TOKEN@*/.fill/*@END_MENU_TOKEN@*/)
-//                                    .frame(width: 100, height: 80)
-//                                    .clipped()
-//                            }
+                            URLImage(spot.photoUrl!) { image in
+                                image
+                                    .resizable()
+                                    .aspectRatio(contentMode: /*@START_MENU_TOKEN@*/.fill/*@END_MENU_TOKEN@*/)
+                                    .frame(width: 100, height: 80)
+                                    .clipped()
+                            }
                         }
                         .padding()
                     }

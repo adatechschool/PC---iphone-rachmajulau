@@ -16,11 +16,11 @@ struct DetailView: View {
     var body: some View {
         VStack {
             
-            //            Image(surfSpot.photos)
-            //                .resizable()
-            //                .aspectRatio(contentMode: /*@START_MENU_TOKEN@*/.fill/*@END_MENU_TOKEN@*/)
-            //                .frame(width:300, height: 300)
-            //                .clipped()
+//                        Image(surfSpot.photo)
+//                            .resizable()
+//                            .aspectRatio(contentMode: /*@START_MENU_TOKEN@*/.fill/*@END_MENU_TOKEN@*/)
+//                            .frame(width:300, height: 300)
+//                            .clipped()
             
             URLImage(surfSpot.photoUrl!) { image in
                 image
@@ -34,13 +34,13 @@ struct DetailView: View {
                 Text(surfSpot.name)
                     .font(.title)
                 
-//                HStack {
-//                    Text(surfSpot.address)
-//                        .font(.subheadline)
-//                    Spacer()
-//                    Text(surfSpot.type)
-//                        .font(.subheadline)
-//                }
+                HStack {
+                    Text(surfSpot.address)
+                        .font(.subheadline)
+                    Spacer()
+                    Text(surfSpot.type)
+                        .font(.subheadline)
+                }
             }
             .padding()
             
@@ -51,7 +51,7 @@ struct DetailView: View {
 
 struct DetailView_Previews: PreviewProvider {
     static var previews: some View {
-        DetailView(surfSpot: SurfSpot(name: "pipeline", photoUrlString: "Hawai"))
+        DetailView(surfSpot: SurfSpot(name: "pipeline", photoUrlString: "Hawai", address: "somewhere", type: "Surf Break"))
         
     }
 }
