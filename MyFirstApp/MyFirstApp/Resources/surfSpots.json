@@ -1,6 +1,4 @@
-
-{
-    "records": [{
+[       {
             "name" : "Pipeline",
             "Surf Break": "Reef Break",
             "Photos": "https://dl.airtable.com/ZuXJZ2NnTF40kCdBfTld_thomas-ashlock-64485-unsplash.jpg",
@@ -11,5 +9,6 @@
             "Photos": "https://dl.airtable.com/e3QoP3cFSyykZJOvWGIy_cesar-couto-477018-unsplash%20(1).jpg",
             "Address": "Jeffreys Bay, South Africa"
         }
-    ]
-}
+]
+
+

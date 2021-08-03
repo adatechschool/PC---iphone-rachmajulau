@@ -1,27 +1,19 @@
 //
-//  DetailView.swift
+//  SurfSpotDetail.swift
 //  MyFirstApp
 //
-//  Created by marie flores on 27/07/2021.
+//  Created by user203337 on 8/3/21.
 //
 
 import SwiftUI
 import URLImage
 
-
-struct DetailView: View {
+struct SurfSpotDetail: View {
     var surfSpot : SurfSpot
     
     
     var body: some View {
         VStack {
-            
-//                        Image(surfSpot.photo)
-//                            .resizable()
-//                            .aspectRatio(contentMode: /*@START_MENU_TOKEN@*/.fill/*@END_MENU_TOKEN@*/)
-//                            .frame(width:300, height: 300)
-//                            .clipped()
-            
             URLImage(surfSpot.photoUrl!) { image in
                 image
                     .resizable()
@@ -49,9 +41,8 @@ struct DetailView: View {
     }
 }
 
-struct DetailView_Previews: PreviewProvider {
+struct SurfSpotDetail_Previews: PreviewProvider {
     static var previews: some View {
-        DetailView(surfSpot: SurfSpot(name: "pipeline", photoUrlString: "Hawai", address: "somewhere", type: "Surf Break"))
-        
+        SurfSpotDetail(surfSpot: surfSpots[1])
     }
 }
