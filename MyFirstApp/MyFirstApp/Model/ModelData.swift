@@ -7,10 +7,11 @@
 
 import Foundation
 
-var surfSpots: [SurfSpot] = load("surfSpots.json")
+
+var surfSpots :[SurfSpot] = load("surfSpots.json")
 
 
-func load<T: Decodable>(_ filename: String) -> T {
+func load(_ filename: String) ->[SurfSpot]{
 
     let data: Data
 
@@ -39,13 +40,13 @@ func load<T: Decodable>(_ filename: String) -> T {
 
         let decoder = JSONDecoder()
         
-        let results = try decoder.decode(T.self, from: data)
+        let results: Result = try decoder.decode(Result.self, from: data)
         
-        return results
+        return results.records
 
     } catch {
 
-        fatalError("Couldn't parse \(filename) as \(T.self):\n\(error)")
+        fatalError("Couldn't parse \(filename) as \(Result.self):\n\(error)")
 
     }
 

@@ -2,7 +2,6 @@ import Foundation
 
 struct Result : Hashable, Codable {
     var records : [SurfSpot]
-
 }
 
 struct SurfSpot : Hashable, Codable {
@@ -29,15 +28,5 @@ struct SurfSpot : Hashable, Codable {
         self.photoUrl = URL(string: photoUrlString)
     }
 }
-//    init(name: String, photoUrlString: String, address: String, type: String) {
-//        print("tonton")
-//        self.name = name
-//        self.photoUrlString = photoUrlString
-//        print(photoUrlString)
-//        self.photoUrl = URL(string: photoUrlString)
-//        print(photoUrl)
-//        self.address = address
-//        self.type = type
-//    }
-//}
+
 
